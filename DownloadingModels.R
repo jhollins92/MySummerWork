@@ -1,3 +1,7 @@
-install.packages("httr")
 rm(list=ls())
 library(RCurl)
+library(httr)
+download.file("ftp://ftp.ebi.ac.uk/pub/databases/biomodels/weekly_archives/2012/BioModels-Database-weekly-2012-07-16-sbmls.tar.bz2", "sbml_download")
+getOption("unzip")
+getwd()
+unzip("~Documents/MySummerWork/sbml_download", exdir="sbml")
